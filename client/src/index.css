@@ -1,0 +1,31 @@
+body {
+  color: white;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: Arial, sans-serif;
+
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+}
+.main-content::-webkit-scrollbar {
+  display: none;
+}
+:root{
+  --color-black1: #121212; 
+  --color-black2: #171717;
+  --color-black3: #232323;
+  --color-black4: #3d3d3d;
+  --color-main: #1C838F; 
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@media screen and (max-width: 768px) {
+  HTML,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}

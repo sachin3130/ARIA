@@ -1,0 +1,59 @@
+.tokencontainer{
+    position: fixed;
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    width: 28rem;
+    max-width: 90%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-black3);
+    border-radius: 0.2rem;
+    /* border: 1px solid purple; */
+}
+.tokencontainer h1{
+    width: 100%;
+    /* border: 1px solid purple; */
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    margin: 0;
+    padding: 0;
+}
+.tokencontainer p{
+    width: 100%;
+    /* border: 1px solid purple; */
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgb(255, 255, 255, 0.8);
+    /* line-height: 3rem; */
+    margin: 0;
+    padding: 0;
+}
+.tokencontainer .btn{
+    /* width: 5rem; */
+    margin-left: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 4rem;
+    border: 1px solid gray;
+}
+.tokencontainer .btn button{
+    /* width: 100%; */
+    /* height: 100%; */
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--color-black3);
+    font-size: 1rem;
+    font-weight: 600;
+    /* padding: 0.5rem; */
+    /* border-radius: 4rem; */
+    /* background-color: white; */
+}
+

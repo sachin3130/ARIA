@@ -1,0 +1,74 @@
+.track{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(50px + 18rem);
+    /* background: var(--before-color,linear-gradient(to bottom, #523CA0 0%, #2A1E52 50%, #191527 80%, #121212 100%)); */
+    background: var(--before-color,linear-gradient(#523CA0 0%, transparent 100%));
+    background-size: cover;
+    background-position: 0% 20%;
+    /* border: 1px solid honeydew; */
+}
+
+/* .track .trackcardcontainer {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+  }
+  
+  
+  .track .trackcardcontainer.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  } */
+
+  h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 button{
+    font-size: 1rem;
+    border: none;
+    background: none;
+    color: white;
+    opacity: 0.8;
+  }
+  h2 button:hover{
+    opacity: 1;
+  }
+
+  .lyrics{
+    font-size: 0.75rem;
+  }
+
+  .cardcontainer {
+    width: inherit;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .cardcontainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .cardcontainer.flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    h2 {
+      /* max-width: inherit; */
+      font-size: 1rem;
+      /* white-space: nowrap; */
+      /* overflow: hidden; */
+      /* text-overflow: ellipsis; */
+    }
+    h2 button{
+      display: none;
+    }
+  }

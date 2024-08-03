@@ -1,0 +1,50 @@
+.nav {
+    background-color: var(--color-black1);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    padding: 0.5rem 0.75rem;
+  }
+  .nav .navoption {
+    line-height: 2.5rem;
+    opacity: 0.8;
+    padding: 0.5rem 0.75rem;
+  }
+  .nav .navoption:hover {
+    opacity: 1;
+  }
+  .nav .active {
+    opacity: 1;
+  }
+  .nav .navoption:hover .link{
+    text-decoration: underline;
+  }
+  .nav .navoption i {
+    font-size: 1.25rem;
+  }
+  .nav .navoption .link{
+    font-size: 1rem;
+    margin-left: 1rem;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav {
+      background-color: var(--color-black3);
+      border-radius: 0.5rem;
+      height: 70px;
+      padding: 0rem 0.75rem;
+  }
+  .nav .navoption {
+    line-height: 1;
+  }
+  .nav .navoption i {
+    font-size: 1rem;
+  }
+  .nav .navoption .link {
+    font-weight: 400;
+  }
+  }

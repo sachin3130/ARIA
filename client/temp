@@ -1,0 +1,112 @@
+import React, { useEffect, useState } from 'react'
+import SideBar from '../components/Sidebar/SideBar';
+import Maincontent from '../components/Maincontent/Maincontent';
+import classes from './Root.module.css';
+import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
+import { ProfileProvider } from '../Context/ProfileContext';
+import { PlaylistFormProvider } from '../Context/PlaylistFormContext';
+
+const Root = () => {
+  const [token, setToken] = useState("");
+  const navigate = useNavigate();
+  const getParamsFromHash = (hash) => {
+    const hashContent = hash.substr(1);
+    const paramsSplit = hashContent.split('&');
+    let params = {};
+    let values = [];
+    paramsSplit.forEach((param) => {
+      values = param.split('=');
+      params[values[0]] = values[1];
+    });
+    return params;
+  }
+  useEffect(() => {
+    setToken(localStorage.getItem('token'));
+  },[token]);
+  // useEffect(() => {
+  //   if(window.location.hash){
+  //     const hash = window.location.hash;
+  //     const tokens = getParamsFromHash(hash);
+  //     localStorage.setItem('token',tokens.access_token);
+  //     setToken(tokens.access_token);
+  //     window.history.pushState({},null,'/home');
+  //   }
+
+  // }, []);
+  useEffect(() => {
+    
+    if(!Cookies.get('isAuthorise')){
+      // const expirationTime = new Date(new Date().getTime() + 60 * 60 * 1000);
+      const expirationTime = new Date(new Date().getTime() + 20 * 1000); 
+      // Cookies.set('isAuthorise',true,{ expires: expirationTime });
+      
+      const currentTime = new Date().getTime();
+      const expirationTime2 = new Date(currentTime + 20000); // 20 seconds from now
+      Cookies.set('authoriseexpireTime', expirationTime2.getTime());
+      Cookies.set('isAuthorise',true,{ expires: expirationTime });
+      console.log("isAuthorise set");
+      window.location.href = `${process.env.REACT_APP_API}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&scopes=${process.env.REACT_APP_SCOPE}&response_type=token&show_dialog=true`;
+
+      // redirectToAuthorizationPage();
+    }
+
+    if(!Cookies.get('token')){
+      if(window.location.hash){
+        const hash = window.location.hash;
+        const tokens = getParamsFromHash(hash);
+        // const expirationTime = new Date(new Date().getTime() + 60 * 60 * 1000);
+        const expirationTime = new Date(new Date().getTime() + 40 * 1000); 
+        // Cookies.set('token',tokens.access_token,{ expires: expirationTime });
+
+        const currentTime = new Date().getTime();
+        const expirationTime2 = new Date(currentTime + 40000); // 20 seconds from now
+        Cookies.set('tokenexpireTime', expirationTime2.getTime());
+        Cookies.set('token',tokens.access_token,{ expires: expirationTime });
+
+        console.log("token set");
+        // setTimeout(() => {
+        //   console.log("isAuthorise expires");
+        // }, 20000); 
+        setToken(tokens.access_token);
+        // navigate('/home')
+        window.history.pushState({},null,'/');
+      }
+    }
+    
+    const intervalId = setInterval(() => {
+      const currentTime = new Date().getTime();
+      const expirationTime = parseInt(Cookies.get('authoriseexpireTime'));
+      if (expirationTime - currentTime <= 0) {
+          console.log("isAuthorise expired");
+          clearInterval(intervalId); // Stop the interval
+          console.log("isAuthorise2 expired");
+          console.log("isAuthorise "+Cookies.get('isAuthorise'));
+          navigate('/');
+      }
+  }, 1000); // Check every second
+
+    
+    const intervalId2 = setInterval(() => {
+      const currentTime = new Date().getTime();
+      const expirationTime = parseInt(Cookies.get('tokenexpireTime'));
+      if (expirationTime - currentTime <= 0) {
+          console.log("token expired");
+          clearInterval(intervalId2);
+          console.log("isAuthorise "+Cookies.get('isAuthorise'));
+      }
+  }, 1000); // Check every second
+  }, [])
+  return (
+    <div className={classes.main}>
+      <ProfileProvider>
+        <PlaylistFormProvider>
+          <SideBar/>
+          <Maincontent/>
+        </PlaylistFormProvider>
+      </ProfileProvider>
+    </div>
+  )
+}
+
+export default Root

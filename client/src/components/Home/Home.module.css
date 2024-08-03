@@ -1,0 +1,43 @@
+h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 button{
+    font-size: 1rem;
+    border: none;
+    background: none;
+    color: white;
+    opacity: 0.8;
+  }
+  h2 button:hover{
+    opacity: 1;
+  }
+  .cardcontainer {
+    width: inherit;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .cardcontainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .cardcontainer.flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    h2 {
+      /* max-width: inherit; */
+      font-size: 1rem;
+      /* white-space: nowrap; */
+      /* overflow: hidden; */
+      /* text-overflow: ellipsis; */
+    }
+    h2 button{
+      display: none;
+    }
+  }

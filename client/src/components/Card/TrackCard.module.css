@@ -1,0 +1,156 @@
+.trackcard {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color-black2);
+    width: 100%;
+    height: 5rem;
+    border-radius: 0.2rem;
+    color: #fff;
+    padding: 0.5rem;
+  }
+  .trackcard:hover {
+    /* cursor: pointer; */
+    background-color: var(--color-black3);
+  }
+  
+  .trackcard .image {
+    cursor: pointer;
+    height: 100%;
+  }
+  .trackcard .image .cardimg {
+    height: 100%;
+    width: auto;
+    border-radius: 0.2rem;
+  }
+  .trackcard .name {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    padding: 0rem 1rem;
+    /* border: 1px solid gray; */
+  }
+  .trackcard .cardtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0rem;
+  }
+  .trackcard .cardinfo {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0rem;
+  }
+  .trackcard .icon {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    margin-left: auto;
+    /* border: 1px solid gray; */
+  }
+  .trackcard .icon i{
+    font-size: 1.5rem;
+    opacity: 0.8;
+  }
+  .trackcard .icon i:hover{
+    opacity: 1;
+  }
+
+   .dropdown {
+    position: absolute;
+    background-color: var(--color-black3);
+    border-radius: 0.25rem;
+    width: 12rem;
+    /* max-width: 50%; */
+    /* top: 4rem; */
+    /* margin-left: auto; */
+    right: 3rem;
+    z-index: 100;
+    padding: 0.25rem;
+  }
+  
+  
+  
+  .dropdown button {
+      display: block;
+      width: 100%;
+      max-width: 15rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: white;
+      padding: 0.5rem;
+      text-align: left;
+      border: none;
+      border-radius: 0.2rem;
+      background-color: var(--color-black3);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  /* Style the dropdown links */
+   .dropdown button i {
+    font-size: 0.8rem;
+    margin-right: 1rem;
+  }
+   .dropdown button:hover {
+    background-color: #3d3d3d;
+  }
+
+@media screen and (max-width: 768px) {
+  .trackcard {
+    height: 4rem;
+  }
+  .trackcard .image .cardimg {
+    height: 100%;
+    width: 3rem;
+    width: auto;
+    border-radius: 0.2rem;
+  }
+  .trackcard .name {
+    max-width: 180px;
+    padding: 0rem 0.5rem;
+  }
+  .trackcard .cardtitle {
+    font-size: 0.85rem;
+  }
+  .trackcard .cardinfo {
+    font-size: 0.6rem;
+  }
+  .trackcard .icon i{
+    font-size: 1rem;
+  }
+  .trackcard .icon i:hover{
+    opacity: 1;
+  }
+  /* .trackcard .dropdown {
+    position: relative;
+    background-color: var(--color-black3);
+    border-radius: 0.25rem;
+    min-width: 160px;
+    
+    right: 0;
+    z-index: 100;
+    padding: 0.25rem;
+  } */
+  .trackcard .dropdown {
+    position: absolute;
+    background-color: var(--color-black3);
+    border-radius: 0.25rem;
+    width: 12rem;
+    /* max-width: 50%; */
+    /* top: 4rem; */
+    /* margin-left: auto; */
+    right: 2rem;
+    z-index: 100;
+    padding: 0.25rem;
+  }
+}

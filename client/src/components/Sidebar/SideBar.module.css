@@ -1,0 +1,32 @@
+.sidebar {
+    background-color: black;
+    width: 340px;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 768px) {
+    .sidebar{
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      bottom: 0px;
+      /* left: 0; */
+      /* right: 0; */
+      width: 100%;
+      padding: 0rem 0.5rem;
+      align-self: center;
+      border-radius: 0rem;
+      max-height: 60%;
+      z-index: 1;
+      overflow-x: hidden;
+      /* background-color: var(--color-black2); */
+      background: none;
+      /* border: 1px solid gray; */
+    }
+    .sidebar.active {
+      display: flex;
+    }
+  }

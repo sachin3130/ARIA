@@ -1,0 +1,54 @@
+.cameracomponent {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assests/emoji.jpeg');
+    background-repeat: no-repeat;
+    background-position: right ;
+    background-size: cover;
+    /* border: 1px solid gray; */
+    padding: auto;
+}
+.cameracomponent::-webkit-scrollbar{
+    display: none;
+}
+.cameracomponent .container{
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    /* padding: 2rem; */
+    background-color: var(--color-black3);
+    /* border: 1px solid white; */
+}
+.cameracomponent .container .image{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    /* border: 1px solid purple; */
+}
+.cameracomponent .container .btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    /* border: 1px solid gray; */
+}
+.cameracomponent .container .btn button{
+    border: none;
+    outline: none;
+    background: none;
+    background-color: white;
+    /* color: white; */
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 40px;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+}

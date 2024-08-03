@@ -1,0 +1,25 @@
+.likedSongs{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(50px + 18rem);
+    /* background: var(--before-color,linear-gradient(to bottom, #523CA0 0%, #2A1E52 50%, #191527 80%, #121212 100%)); */
+    background: var(--before-color,linear-gradient(#523CA0 0%, transparent 100%));
+    background-size: cover;
+    background-position: 0% 20%;
+    /* border: 1px solid honeydew; */
+}
+
+.likedSongs .trackcardcontainer {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+  }
+  
+  
+  .likedSongs .trackcardcontainer.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }

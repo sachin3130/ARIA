@@ -1,0 +1,61 @@
+.card {
+    display: inline-block;
+    background-color: var(--color-black2);
+    width: 11rem;
+    border-radius: 0.2rem;
+    color: #fff;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0rem;
+  }
+  .card:hover {
+    cursor: pointer;
+    background-color: var(--color-black3);
+  }
+  
+  
+  .cardimg {
+    width: 10rem;
+    height: 10rem;
+    /* width: 9.94rem; */
+    /* height: 9.94rem; */
+    border-radius: 0.2rem;
+  }
+  .cardtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.2rem 0rem;
+    margin: 0rem;
+  }
+  .cardinfo {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 8rem;
+      padding: 0.5rem;
+      margin: 0.5rem 0.5rem 0.5rem 0rem;
+    }
+    .cardimg {
+      width: 7rem;
+      height: 7rem;
+      /* width: 9.94rem; */
+      /* height: 9.94rem; */
+      border-radius: 0.2rem;
+    }
+    .cardtitle {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .cardinfo {
+      font-size: 0.75rem;
+    }
+  }

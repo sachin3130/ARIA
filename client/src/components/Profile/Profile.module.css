@@ -1,0 +1,195 @@
+.profilecontainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    width: 28rem;
+    max-width: 90%;
+    /* height: 16rem; */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-black3);
+    border-radius: 0.2rem;
+    /* box-shadow: 0 0 10px var(--color-black4);  */
+    /* border: 1px solid purple; */
+}
+.profilecontainer .heading{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 600;
+    align-items: center;
+    padding-bottom: 1rem;
+    /* border: 1px solid purple; */
+}
+.profilecontainer .heading i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(255,255,255,0.2);
+}
+.profilecontainer .heading i:hover{
+    color: rgb(255,255,255,0.8);
+}
+/* .profilecontainer h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin: 0;
+    padding: 0;
+    border: 1px solid purple;
+} */
+.profilecontainer .profile{
+    height: 100%;
+    /* overflow-y: hidden; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid gray; */
+    position: relative;
+}
+.profilecontainer .profile .image{
+    width: 10rem;
+    height: 10rem;
+    /* height: 100%; */
+    /* border-radius: 50%; */
+    /* position: relative; */
+    /* margin-right: 1rem; */
+    overflow: hidden;
+    /* border: 1px solid purple; */
+}
+.profilecontainer .profile .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.profilecontainer .profile .icon{
+    height: 100%;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    /* border: 1px solid purple; */
+}
+.profilecontainer .profile .icon:hover{
+    opacity: 1;
+    backdrop-filter: blur(5px);
+}
+.profilecontainer .profile .icon label{
+    font-size: 1rem;
+}
+.profilecontainer .profile .icon label:hover{
+    text-decoration: underline;
+}
+.profilecontainer .profile .icon i{
+    font-size: 2rem;
+}
+.profilecontainer .profile .icon span{
+    font-size: 1rem;
+    cursor: default;
+}
+.profilecontainer .profile .icon span:hover{
+    text-decoration: underline;
+}
+
+.profilecontainer .profile .form{
+    /* width: 100%; */
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+    /* border: 1px solid yellow; */
+}
+.profilecontainer .profile .form .field{
+    width: 100%;
+    /* padding: 1rem 0.5rem; */
+    /* border: 1px solid yellow; */
+}
+
+.profilecontainer .profile .form .field input{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    background-color: var(--color-black4);
+    /* border: 1px solid rgb(255,255,255,0.2); */
+    color: rgb(255,255,255,0.8);
+    /* border: 1px solid purple; */
+}
+.profilecontainer .profile .form .field input:focus{
+    border: 1px solid rgb(255,255,255,0.2);
+}
+.profilecontainer .profile .form .btn{
+    /* width: 100%; */
+    width: 5rem;
+    margin-left: auto;
+    /* align-self: flex-end; */
+    padding-top: 1rem;
+    /* border: 1px solid yellow; */
+    /* display: none; */
+}
+.profilecontainer .profile .form .btn button{
+    width: 100%;
+    margin-left: auto;
+    border: none;
+    outline: none;
+    color: var(--color-black3);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 4rem;
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .profilecontainer{
+        width: 20rem;
+    }
+    
+    .profilecontainer .profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profilecontainer .profile .image{
+        width: 5rem;
+        height: 5rem;
+        overflow: hidden;
+    }
+    .profilecontainer .profile .icon{
+        width: 5rem;
+        height: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        margin-top: -5rem;
+    }
+    .profilecontainer .profile .icon label{
+        font-size: 0.6rem;
+    }
+    .profilecontainer .profile .icon i{
+        font-size: 0.85rem;
+    }
+    .profilecontainer .profile .icon span{
+        font-size: 0.6rem;
+        cursor: default;
+    }
+    
+    .profilecontainer .profile .form{
+        padding: 1rem 0rem 0rem 0rem;
+    }
+    
+}
