@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Aria
+Welcome to Aria, the ultimate music player that brings your favorite tunes to life with a seamless and engaging experience. Aria offers a comprehensive set of features to enhance your music journey. With Aria, you can enjoy a rich, personalized music experience, including real-time lyrics, custom playlists, and even song recommendations based on your facial expressions.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+### Home Page
+#### Playlists Section
+- Create and manage your personal playlists.
+- Change the name and image of your playlists.
 
-## Available Scripts
+#### Recent Played Songs
+- Quickly access songs you've recently listened to.
 
-In the project directory, you can run:
+#### Recommended Artists
+- Discover new artists based on your listening habits.
 
-### `npm start`
+#### Recommended Songs
+- Enjoy a curated list of songs tailored to your taste.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Featured Playlists
+- Explore playlists handpicked by our editorial team.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Search Page
+#### Recent Played Songs
+- Access your recently played songs directly from the search page.
 
-### `npm test`
+#### Browse Song Categories
+- Find songs sorted into various categories for easy discovery.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Facial Expression Search
+- Use the power of a CNN (Convolutional Neural Network) to scan your face and search for songs that match your current mood.
 
-### `npm run build`
+### Liked Songs Page
+#### Favorites Collection
+- Keep all your liked songs in one place for easy access.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Playlist Page
+#### Playlist Tracks Collection
+- Keep all your songs of a playlist in one place for easy access.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### User Profile Page
+- View and edit your profile information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Current Playing Track
+- See the currently playing song along with its details.
+- View the lyrics of the song you are listening to in real-time.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Authentication
+- Easily create an account or log in to access personalized features.
